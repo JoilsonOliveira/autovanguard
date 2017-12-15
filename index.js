@@ -1,6 +1,6 @@
 module.exports = function AutoVanguard(dispatch) {
-  dispatch.hook('sCompleteEventMatchingQuest', function(event) {
-    dispatch.toServer('cCompleteDailyEvent', { id: event.id });
-    return false;
-  });
-};
+	dispatch.hook('S_COMPLETE_EVENT_MATCHING_QUEST', event => {
+		dispatch.toServer('C_COMPLETE_DAILY_EVENT', { id: event.id })
+		return false
+	})
+}
